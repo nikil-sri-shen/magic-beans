@@ -10,15 +10,22 @@ plan:
       transactions:
         - contract-publish:
             contract-name: magic-beans
-            expected-sender: ST1XBPQQWGEENAGH9RTBVP3JKM91R4RWZ1XAW01PE
+            expected-sender: ST184FXACFA2AT8VZ4ZNJ6E1393T92T0WFARRYVES
             cost: 10900
             path: contracts/magic-beans.clar
             anchor-block-only: true
             clarity-version: 2
         - contract-publish:
+            contract-name: magic-beans-lp
+            expected-sender: ST184FXACFA2AT8VZ4ZNJ6E1393T92T0WFARRYVES
+            cost: 13950
+            path: contracts/magic-beans-lp.clar
+            anchor-block-only: true
+            clarity-version: 2
+        - contract-publish:
             contract-name: beanstalk-exchange
-            expected-sender: ST1XBPQQWGEENAGH9RTBVP3JKM91R4RWZ1XAW01PE
-            cost: 41920
+            expected-sender: ST184FXACFA2AT8VZ4ZNJ6E1393T92T0WFARRYVES
+            cost: 71390
             path: contracts/beanstalk-exchange.clar
             anchor-block-only: true
             clarity-version: 2

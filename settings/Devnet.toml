@@ -3,9 +3,9 @@ name = "devnet"
 deployment_fee_rate = 10
 
 [accounts.deployer]
-mnemonic = "weather embark forward ginger spot bracket diary flag cheap census method current symptom thunder weather apology crop weapon seminar other okay noodle object bitter"
+mnemonic = "stone van final trigger latin human method bonus nation upset glass jewel tribe aisle cost smoke lab regret tackle craft afford grant silk keen"
 balance = 100_000_000_000_000
-# stx_address = ST1XBPQQWGEENAGH9RTBVP3JKM91R4RWZ1XAW01PE
+# stx_address = ST184FXACFA2AT8VZ4ZNJ6E1393T92T0WFARRYVES
 # mnemonic = "twice kind fence tip hidden tilt action fragile skin nothing glory cousin green tomorrow spring wrist shed math olympic multiply hip blue scout claw"
 # balance = 100_000_000_000_000
 # secret_key: 753b7cc01a1a2e86221266a154af739463fce51219d97e4f856cd7200c3bd2a601
