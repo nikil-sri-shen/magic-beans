@@ -9,17 +9,17 @@ plan:
     - id: 0
       transactions:
         - contract-publish:
-            contract-name: beanstalk-exchange
-            expected-sender: ST1XBPQQWGEENAGH9RTBVP3JKM91R4RWZ1XAW01PE
-            cost: 2370
-            path: contracts/beanstalk-exchange.clar
-            anchor-block-only: true
-            clarity-version: 2
-        - contract-publish:
             contract-name: magic-beans
             expected-sender: ST1XBPQQWGEENAGH9RTBVP3JKM91R4RWZ1XAW01PE
             cost: 10900
             path: contracts/magic-beans.clar
+            anchor-block-only: true
+            clarity-version: 2
+        - contract-publish:
+            contract-name: beanstalk-exchange
+            expected-sender: ST1XBPQQWGEENAGH9RTBVP3JKM91R4RWZ1XAW01PE
+            cost: 41920
+            path: contracts/beanstalk-exchange.clar
             anchor-block-only: true
             clarity-version: 2
       epoch: "2.5"
