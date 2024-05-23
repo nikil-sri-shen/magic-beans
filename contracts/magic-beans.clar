@@ -7,10 +7,12 @@
 
 (define-data-var tokenUri (optional (string-utf8 256)) none)
 
+;;TODO:Completed testing get-symbol
 (define-read-only (get-symbol)
   (ok "MAGIC")
 )
 
+;;TODO:Completed testing get-balance
 (define-read-only (get-balance (who principal))
   (ok (ft-get-balance magic-beans who))
 )
@@ -20,22 +22,27 @@
   (ok (var-set tokenUri (some uri)))
 )
 
+;;TODO:Completed testing get-name
 (define-read-only (get-name)
   (ok "magic-beans")
 )
 
+;;TODO:Completed testing get-decimals
 (define-read-only (get-decimals)
   (ok u0)
 )
 
+;;TODO:Completed testing get-token-uri
 (define-read-only (get-token-uri)
   (ok (var-get tokenUri))
 )
 
+;;TODO:Completed testing get-total-supply
 (define-read-only (get-total-supply)
   (ok (ft-get-supply magic-beans))
 )
 
+;;TODO:Completed testing mint
 ;; Custom function to mint tokens, only available to the contract owner
 (define-public (mint (amount uint) (who principal))
   (begin
@@ -47,6 +54,7 @@
   )
 )
 
+;;TODO:Completed testing transfer
 (define-public (transfer (amount uint) (sender principal) (recipient principal))
   (begin
     (asserts! (is-eq tx-sender sender) err-owner-only)
