@@ -1,11 +1,39 @@
+(impl-trait .traits.ft-trait)
 (define-fungible-token magic-beans)
 
 (define-constant contract-owner tx-sender)
 (define-constant err-owner-only (err u100))
 (define-constant err-amount-zero (err u101))
 
+(define-data-var tokenUri (optional (string-utf8 256)) none)
+
 (define-read-only (get-symbol)
   (ok "MAGIC")
+)
+
+(define-read-only (get-balance (who principal))
+  (ok (ft-get-balance magic-beans who))
+)
+
+(define-public (set-token-uri (uri (string-utf8 256)))
+  ;; #[filter(uri)]
+  (ok (var-set tokenUri (some uri)))
+)
+
+(define-read-only (get-name)
+  (ok "magic-beans")
+)
+
+(define-read-only (get-decimals)
+  (ok u0)
+)
+
+(define-read-only (get-token-uri)
+  (ok (var-get tokenUri))
+)
+
+(define-read-only (get-total-supply)
+  (ok (ft-get-supply magic-beans))
 )
 
 ;; Custom function to mint tokens, only available to the contract owner
@@ -27,8 +55,4 @@
     ;; #[allow(unchecked_data)]
     (ft-transfer? magic-beans amount sender recipient)
   )
-)
-
-(define-read-only (get-balance (who principal))
-  (ft-get-balance magic-beans who)
 )
